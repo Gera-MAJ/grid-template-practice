@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container{
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-areas: 'cabecera cabecera'
+                         'title title'
+                         'content barra'
+                          'footer footer'; 
+                          /*se repite la cantidad de veces el nombre, según la cantidad de columnas que se quiera */
+    gap: 10px;
+    height: 800px;
+    /* con esto se puede controlar el tamaño de las columnas */
+    grid-template-columns: 70% auto; 
+
+    /* con esto se controla el tamaño de las filas */
+    grid-template-rows: 20% 10% 60% 10%;
+}
+
+.caja1,
+.caja2,
+.caja3,
+.caja4,
+.caja5 {
+    border: 2px solid black;
+    text-align: center;
+    padding: 20px;
+}
+
+.caja1 {
+    background-color: aquamarine;
+    grid-area: cabecera;
+}
+
+.caja2 {
+    background-color: chocolate;
+    grid-area: title;
+}
+
+.caja3 {
+    background-color: cornflowerblue;
+    grid-area: content;
+}
+
+.caja4 {
+    background-color: darkgreen;
+    grid-area: barra;
+}
+
+.caja5 {
+    background-color: darkorchid;
+    grid-area: footer;
+}
+
